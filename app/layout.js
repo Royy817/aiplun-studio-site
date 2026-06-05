@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         {children}
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" strategy="beforeInteractive" />
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" strategy="beforeInteractive" />
-        <Script src="/script.js?v=final-qa-mobile-polish-20260605-64" strategy="afterInteractive" />
+        <Script src="/script.js?v=hero-layout-fix-20260605-66" strategy="afterInteractive" />
       </body>
     </html>
   );
