@@ -166,6 +166,13 @@ const finishIntro = () => {
       rotateX: 0,
       clearProps: 'visibility,opacity,transform'
     });
+    gsap.set(['.hero-content > *', '.hero-gallery img'], {
+      autoAlpha: 1,
+      y: 0,
+      scale: 1,
+      rotation: 0,
+      clearProps: 'visibility,opacity,transform'
+    });
   }
   if (introGate) {
     introGate.setAttribute('hidden', '');
