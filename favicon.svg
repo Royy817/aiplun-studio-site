@@ -1,8 +1,12 @@
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
+import HtmlContent from '@/components/HtmlContent';
 
-export default function HtmlContent({ file }) {
-  const html = readFileSync(path.join(process.cwd(), 'content', file), 'utf8');
+export const dynamic = 'force-static';
 
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+export const metadata = {
+  title: 'プラン比較 | Aiplun Studio',
+  description: 'Aiplun Studioのスタート、スタンダード、プレミアム各プランの内容、料金、修正回数、公開後サポートを比較できます。'
+};
+
+export default function PlansPage() {
+  return <HtmlContent file="plans.html" />;
 }
