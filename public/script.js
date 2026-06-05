@@ -151,6 +151,10 @@ const initHeroVideo = () => {
 };
 
 const finishIntro = () => {
+  if (document.body.classList.contains('intro-finished')) {
+    return;
+  }
+
   document.body.classList.remove('intro-active');
   document.body.classList.add('intro-finished');
   if (window.gsap) {
@@ -184,6 +188,12 @@ const initFallbackAnimations = () => {
 
 const initGsapAnimations = () => {
   gsap.registerPlugin(ScrollTrigger);
+
+  window.setTimeout(() => {
+    if (document.body.classList.contains('intro-active')) {
+      finishIntro();
+    }
+  }, 4300);
 
   gsap.set(motionTargets, { autoAlpha: 0, y: 26 });
   gsap.set(revealItems, { autoAlpha: 0, y: 22 });
