@@ -160,6 +160,12 @@ const finishIntro = () => {
   document.body.classList.add('intro-finished');
   if (window.gsap) {
     gsap.set(['.site-header', 'main'], { autoAlpha: 1, clearProps: 'visibility,opacity' });
+    gsap.set('.hero h1 > span', {
+      autoAlpha: 1,
+      y: 0,
+      rotateX: 0,
+      clearProps: 'visibility,opacity,transform'
+    });
   }
   if (introGate) {
     introGate.setAttribute('hidden', '');
@@ -190,12 +196,6 @@ const initFallbackAnimations = () => {
 const initGsapAnimations = () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  window.setTimeout(() => {
-    if (document.body.classList.contains('intro-active')) {
-      finishIntro();
-    }
-  }, 4300);
-
   gsap.set(motionTargets, { autoAlpha: 0, y: 26 });
   gsap.set(revealItems, { autoAlpha: 0, y: 22 });
   gsap.set(['.hero-content', '.hero-gallery'], { autoAlpha: 1, y: 0 });
@@ -214,6 +214,13 @@ const initGsapAnimations = () => {
     defaults: { ease: 'power3.out' },
     onComplete: finishIntro
   });
+
+  window.setTimeout(() => {
+    if (document.body.classList.contains('intro-active')) {
+      introTimeline.kill();
+      finishIntro();
+    }
+  }, 4300);
 
   introTimeline
     .fromTo('.intro-water-bg', { scale: 1.1, autoAlpha: 0.88 }, { scale: 1.03, autoAlpha: 0.98, duration: 1.05, ease: 'power2.out' })
