@@ -94,7 +94,8 @@ const splitIntroLogo = () => {
   });
 };
 
-if (hasGsap) {
+const enableHeroCharSplit = false;
+if (hasGsap && enableHeroCharSplit) {
   splitHeroTitle();
 }
 splitIntroLogo();
@@ -234,7 +235,7 @@ const initGsapAnimations = () => {
     .to('.intro-gate', { autoAlpha: 0, duration: 0.55, ease: 'power2.out' }, '-=0.12')
     .from('.site-header', { y: -18, autoAlpha: 0, duration: 0.5 }, '-=0.3')
     .from('.hero-content > *:not(h1)', { autoAlpha: 0, y: 26, stagger: 0.09, duration: 0.8 }, '-=0.32')
-    .from('.hero-char', { autoAlpha: 0, yPercent: 110, rotateX: -70, transformOrigin: '50% 100%', stagger: 0.018, duration: 0.72, ease: 'back.out(1.7)' }, '-=0.76')
+    .from('.hero h1 > span', { autoAlpha: 0, y: 28, rotateX: -12, transformOrigin: '50% 100%', stagger: 0.08, duration: 0.78, ease: 'power3.out' }, '-=0.76')
     .from('.hero-gallery img', { autoAlpha: 0, y: 28, rotate: -1.5, scale: 0.96, stagger: 0.08, duration: 0.75 }, '-=0.56');
 
   window.setTimeout(() => {
