@@ -1,12 +1,141 @@
-import HtmlContent from '@/components/HtmlContent';
+<header class="site-header">
+    <div class="container header-inner">
+      <a href="/#top" class="logo" aria-label="Aiplun Studio トップへ"><img class="logo-mark" src="/favicon.svg?v=friendly-icon-20260603-44" alt="" width="34" height="34"> <span>Aiplun Studio</span></a>
+      <button class="menu-toggle" aria-label="メニューを開閉" aria-expanded="false" aria-controls="global-nav">☰</button>
+      <nav id="global-nav" class="global-nav" aria-label="グローバルナビゲーション">
+        <a href="/#services">サービス</a>
+        <a href="/#pricing">料金</a>
+        <a href="/plans">プラン比較</a>
+        <a href="/#works">制作・開発実績</a>
+        <a href="/#flow">制作の流れ</a>
+        <a href="/#faq">よくある質問</a>
+        <a href="/#contact">お問い合わせ</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="/#contact">まずは無料相談</a>
+    </div>
+  </header>
 
-export const dynamic = 'force-static';
+  <main class="plan-page">
+    <section class="section plan-page-hero">
+      <div class="container plan-page-hero-inner">
+        <div>
+          <p class="eyebrow">Plan Comparison</p>
+          <h1><span>御社に合うプランを、</span><span>無理なく選べるように。</span></h1>
+          <p class="lead">ホームページ制作、FAQ型チャットボット、業務改善支援の違いを、料金・納期・サポート内容ごとに整理しました。</p>
+          <div class="hero-points" role="list" aria-label="強調情報">
+            <span role="listitem">MONITOR PRICE FROM &yen;30,000</span>
+            <span role="listitem">LIMITED TO 3 COMPANIES</span>
+            <span role="listitem">FREE FIRST CONSULTATION</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=royryu221317%40gmail.com&su=Aiplun%20Studio%E3%81%B8%E3%81%AE%E7%84%A1%E6%96%99%E7%9B%B8%E8%AB%87" target="_blank" rel="noopener noreferrer">メールで無料相談する</a>
+            <a class="btn btn-secondary" href="/#pricing">料金へ戻る</a>
+          </div>
+          <p class="consult-note consult-note-center">プランが決まっていなくても大丈夫です。今の状況を伺い、無理のない始め方を一緒に整理します。</p>
+        </div>
+      </div>
+    </section>
 
-export const metadata = {
-  title: '利用規約 | Aiplun Studio',
-  description: 'Aiplun Studioの利用規約です。ホームページ制作、FAQ型チャットボット導入、業務改善支援、保守・更新サポートの利用条件について掲載しています。'
-};
+    <section class="section comparison comparison-page" id="plan-table">
+      <div class="container">
+        <div class="section-heading centered">
+          <p class="eyebrow">Compare</p>
+          <h2>プラン比較表</h2>
+          <p class="lead">スタンダードプランは、信頼感のあるホームページと問い合わせ案内をまとめて整えたい企業様におすすめです。</p>
+        </div>
+        <div class="support-intro reveal">
+          <p>ホームページは、公開して終わりではありません。営業時間、料金、サービス内容、写真、よくある質問など、事業の変化に合わせて更新していくことが大切です。Aiplun Studioでは、プランに応じて公開後の修正・相談サポートをご用意しています。</p>
+          <span>サポート返信目安：土日を含む48時間以内</span>
+        </div>
+        <div class="comparison-table-wrap reveal">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>比較項目</th>
+                <th>スタート</th>
+                <th class="is-recommended">スタンダード</th>
+                <th>プレミアム</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th>価格目安</th><td>3〜5万円</td><td class="is-recommended">10〜15万円</td><td>30〜50万円</td></tr>
+              <tr><th>主な内容</th><td>LP1ページ＋問い合わせフォーム</td><td class="is-recommended">HP5ページ＋FAQ型チャットボット</td><td>HP＋FAQ型チャットボット＋業務改善支援1件</td></tr>
+              <tr><th>おすすめ対象</th><td>まず公式ページを持ちたい企業様</td><td class="is-recommended">会社の信頼感と問い合わせ案内を整えたい企業様</td><td>業務の見直しまで本格的に進めたい企業様</td></tr>
+              <tr><th>納期目安</th><td>約1週間</td><td class="is-recommended">約2〜3週間</td><td>約1〜2ヶ月</td></tr>
+              <tr><th>初回制作時の修正</th><td>1回まで</td><td class="is-recommended">3回まで</td><td>5回まで</td></tr>
+              <tr><th>公開後サポート</th><td>なし</td><td class="is-recommended">1ヶ月間</td><td>3ヶ月間</td></tr>
+              <tr><th>公開後の修正</th><td>別途お見積もり</td><td class="is-recommended">軽微な文章修正、画像差し替え、FAQ内容修正、簡単な運用相談</td><td>HP修正、FAQ改善、問い合わせ導線の見直し、業務改善相談</td></tr>
+              <tr><th>FAQ型チャットボット</th><td>なし</td><td class="is-recommended">あり。外部AI APIは使用しません。</td><td>あり。外部AI APIは使用しません。</td></tr>
+              <tr><th>業務改善支援</th><td>なし</td><td class="is-recommended">相談内容に応じて別途提案</td><td>1件含む</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-export default function TermsPage() {
-  return <HtmlContent file="terms.html" />;
-}
+    <section class="section plan-guide">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">How To Choose</p>
+          <h2>迷ったときの選び方</h2>
+        </div>
+        <div class="plan-detail-grid">
+          <article class="plan-detail-card reveal">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&fm=jpg&q=58&w=720" alt="まず小さく始める会社の打ち合わせイメージ" loading="lazy" decoding="async">
+            <h3>まず小さく始めたい</h3>
+            <p>名刺代わりの公式ページや、1つの商品・サービス紹介を整えるならスタートプランがおすすめです。</p>
+          </article>
+          <article class="plan-detail-card featured-detail reveal delay-1">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&fm=jpg&q=58&w=720" alt="問い合わせ導線を整理する会議イメージ" loading="lazy" decoding="async">
+            <h3>問い合わせにつなげたい</h3>
+            <p>会社概要、サービス、料金、FAQ、問い合わせ導線をまとめて整えるならスタンダードプランがおすすめです。</p>
+          </article>
+          <article class="plan-detail-card reveal delay-2">
+            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&fm=jpg&q=58&w=720" alt="業務改善を相談するイメージ" loading="lazy" decoding="async">
+            <h3>業務まで見直したい</h3>
+            <p>サイト制作だけでなく、問い合わせ対応や情報整理の改善も進めたい場合はプレミアムプランをご検討ください。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta" id="contact">
+      <div class="container final-cta-inner">
+        <h2>どのプランが合うか分からない段階でもご相談ください。</h2>
+        <p>現在のお悩みを伺い、必要な内容だけをご提案します。不要な機能の追加や強引な営業は行いません。</p>
+        <div class="consult-steps" aria-label="無料相談の流れ">
+          <div><span>01</span><strong>状況を送る</strong><small>短い文章で問題ありません。</small></div>
+          <div><span>02</span><strong>必要範囲を整理</strong><small>プランの違いを説明します。</small></div>
+          <div><span>03</span><strong>見積もり確認</strong><small>契約前提でなくて大丈夫です。</small></div>
+        </div>
+        <div class="hero-points" role="list" aria-label="強調情報">
+          <span role="listitem">FREE FIRST CONSULTATION</span>
+          <span role="listitem">REPLY WITHIN 48 HOURS</span>
+          <span role="listitem">LIMITED MONITOR OFFER</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=royryu221317%40gmail.com&su=Aiplun%20Studio%E3%81%B8%E3%81%AE%E7%84%A1%E6%96%99%E7%9B%B8%E8%AB%87" target="_blank" rel="noopener noreferrer">メールで無料相談する</a>
+          <a class="btn btn-secondary" href="/#top">トップへ戻る</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Aiplun Studio</p>
+      <p>地域の中小企業・店舗様向けホームページ制作 / FAQ型チャットボット / 業務改善支援</p>
+      <nav class="footer-links" aria-label="フッターリンク">
+        <span class="footer-link-row">
+          <a href="/privacy">プライバシーポリシー</a>
+          <a href="/legal">特定商取引法に基づく表記</a>
+        </span>
+        <a class="footer-terms-link" href="/terms">利用規約</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a class="mobile-consult-bar" href="/#contact">
+    <strong>まずは無料相談</strong>
+    <span>土日を含む48時間以内に返信</span>
+  </a>
