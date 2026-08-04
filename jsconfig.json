@@ -1,8 +1,1 @@
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
-  }
-}
+NEXT_PUBLIC_SITE_URL=https://aiplun-studio-site.vercel.app

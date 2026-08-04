@@ -1,19 +1,8 @@
 {
-  "name": "aiplun-studio-site",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Aiplun Studio official service site built with Next.js for Vercel.",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
-  },
-  "engines": {
-    "node": ">=20.18.0"
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
   }
 }
